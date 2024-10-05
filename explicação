@@ -1,0 +1,17 @@
+Primeiro, temos a classe Department. Ela possui dois atributos: name e id. O departamento, neste caso, é uma entidade independente que pode existir por si só, 
+sem a necessidade de ser associado a um funcionário.
+
+Temos também a classe Project, que representa um projeto. Da mesma forma que o departamento, o projeto possui atributos id e title. A diferença é que, 
+no nosso contexto, esse projeto faz parte diretamente da vida de um funcionário.
+
+A classe principal aqui é Employee. Um funcionário tem atributos próprios, como id e name, mas também tem um departamento, que é um exemplo de agregação, 
+e um projeto, que é parte de uma composição. Isso significa que o projeto está profundamente integrado ao ciclo de vida do funcionário.
+
+Na prática, quando instanciamos um funcionário, associamos a ele tanto um departamento quanto um projeto. O departamento pode continuar existindo mesmo 
+que o funcionário seja removido, mas o projeto, por outro lado, está diretamente ligado ao funcionário e, sem o funcionário, o projeto também deixaria de existir.
+
+Para testar essa lógica, criamos um método main onde instanciamos um departamento, um projeto, e então criamos um funcionário que agrega o departamento e 
+compõe o projeto. Quando exibimos as informações do funcionário, vemos que ele tem um departamento independente, mas seu projeto é parte dele.
+
+O que estamos visualizando com esse exemplo é que a agregação e a composição são maneiras diferentes de representar a relação entre objetos no mundo real. 
+A agregação permite que um objeto exista sem outro, enquanto na composição, o ciclo de vida de um objeto depende diretamente de outro.
